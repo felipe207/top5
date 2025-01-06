@@ -35,7 +35,7 @@ const styles = {
     margin: 0,
   },
   loginButton: {
-    backgroundColor: "#1a73e8", // Cor azul
+    backgroundColor: "#212121", 
     color: "#fff",
     border: "none",
     padding: "10px 20px",
@@ -43,6 +43,7 @@ const styles = {
     cursor: "pointer",
     fontSize: "1rem",
     transition: "background-color 0.3s",
+    border: "1px solid #fff",
   },
 };
 

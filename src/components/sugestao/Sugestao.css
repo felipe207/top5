@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    padding: 50px;
+    padding: 20px;
     width: 200px;
-    height: 200px;
-    background-color: #dadada;
+    height: 150px;
+    background-color: #212121;
     width: 100%;
 }
 
@@ -16,14 +16,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 200px;
+    width: 300px;
     height: 200px;
     background-color: #ffffff;
-    width: 600px;
+    width: 700px;
 }
 
 .sugest-title{
@@ -38,4 +38,32 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+}
+
+.sugestao-header{
+    width:620px;
+}
+.sugestao-title-1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.sugest-elements{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.sugest-button{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+    width: 100px;
+    background-color: #000;
+    color: #fff;
 }
