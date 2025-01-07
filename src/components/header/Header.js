@@ -5,7 +5,9 @@ const Header = () => {
     <header style={styles.header}>
       <div style={styles.container}>
         <h1 style={styles.logo}>Pine Music</h1>
+        <a href="/login">
         <button style={styles.loginButton}>Login</button>
+        </a>
       </div>
     </header>
   );
