@@ -42,3 +42,24 @@
     transform: translateY(-65%);  
 
 }
+
+.link-home{
+    color:white;
+    /* remove sublinhado */
+    text-decoration: none;
+}
+.link-musicas{
+    color:white;
+    /* remove sublinhado */
+    text-decoration: none;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
