@@ -12,7 +12,7 @@ const ListagemEditavel = () => {
             try {
                 const response = await axios.get("http://localhost:8000/api/musicas");
                 if (response.data.results) {
-                    setMusicas(response.data.results);
+                    setMusicas(response.data.results.data);
 
                 } else {
                     setError("Nenhum resultado encontrado.");
