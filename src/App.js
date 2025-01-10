@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Login from './components/pages/Login';
 import Logout from './components/pages/Logout';
 import Musicas from './components/pages/Musicas';
+import EditaMusica from './components/pages/EditaMusica';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/musicas" element={<Musicas />} />
+        <Route path="/edita-musica/:id" element={<EditaMusica />} />
       </Routes>
     </Router>
   );

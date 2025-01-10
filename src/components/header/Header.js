@@ -18,7 +18,7 @@ const Header = () => {
             <h1>Olá, {name}</h1>
 
             <a className="link-musicas" href="/musicas">
-              <h1 >Músicas</h1>
+              <h1 >Gerenciar Músicas</h1>
             </a>
             <a href="/logout">
               <button style={styles.loginButton}>Logout</button>
