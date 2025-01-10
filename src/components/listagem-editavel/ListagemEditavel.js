@@ -6,11 +6,13 @@ const ListagemEditavel = () => {
     // pega os valores da api loccalhost:8000/api/musicas
     const [musicas, setMusicas] = useState([]);
     const [error, setError] = useState(null);
+    const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
 
     useEffect(() => {
         const fetchMusicas = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/api/musicas");
+                // const response = await axios.get("http://localhost:8000/api/musicas");
+                const response = await axios.get(`${backendUrl}/api/musicas`);
                 if (response.data.results) {
                     setMusicas(response.data.results.data);
 
@@ -35,7 +37,8 @@ const ListagemEditavel = () => {
     };
 
     function excluirMusica(id) {
-        axios.delete(`http://localhost:8000/api/delete-musica/${id}`)
+        // axios.delete(`http://localhost:8000/api/delete-musica/${id}`)
+        axios.delete(`${backendUrl}/api/delete-musica/${id}`)
             .then(() => {
                 
                 alert("Música excluída com sucesso!");

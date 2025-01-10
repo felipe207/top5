@@ -15,11 +15,12 @@ const Form = (props) => {
     });
     const [error, setError] = useState(null);
     const id = props.id;
+    const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
 
     useEffect(() => {
         const fetchMusica = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/musicas/${id}`);
+                const response = await axios.get(`${backendUrl}/api/musicas/${id}`);
                 if (response.data.results) {
                     setMusica(response.data.results);
                 } else {
@@ -35,7 +36,7 @@ const Form = (props) => {
 
     const editaMusica = async (id) => {
         try {
-            await axios.put(`http://localhost:8000/api/update-musica/${id}`, musica);
+            await axios.put(`${backendUrl}/api/update-musica/${id}`, musica);
             alert("Música atualizada com sucesso!");
             window.location.href = "/musicas";
         } catch (err) {
