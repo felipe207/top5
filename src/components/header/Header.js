@@ -10,7 +10,7 @@ const Header = () => {
     <header style={styles.header}>
       <div style={styles.container}>
         <a className="link-home" href="/">
-          <h1 style={styles.logo}>Pine Music</h1>
+          <h1 style={styles.logo}>Pine Music - Top 5 Tião Carreiro e Pardinho</h1>
         </a>
 
         {token ? (

@@ -98,3 +98,14 @@
     font-size: 36px;
     color: #ff0000;
 }
+
+.form-button{
+    background-color: rgb(55, 55, 151);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+    margin: 2px;
+}
