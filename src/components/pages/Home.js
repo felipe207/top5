@@ -7,11 +7,13 @@ import Lista from '../../components/lista/Lista';
 
 function Home() {
 
+  const token = localStorage.getItem('token');
+
   return (
     <section className="w-full h-[70%] lg:h-screen  pt-44 lg:pt-56">
       <Header />
       <Hero />
-      <Sugestao />
+      { token ? <Sugestao /> : null }
       <Lista />
       <Footer />
     </section>
