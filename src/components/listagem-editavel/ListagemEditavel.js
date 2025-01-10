@@ -35,10 +35,10 @@ const ListagemEditavel = () => {
     };
 
     function excluirMusica(id) {
-        axios.delete(`http://localhost:8000/api/delete-musicas/${id}`)
+        axios.delete(`http://localhost:8000/api/delete-musica/${id}`)
             .then(() => {
-                const novasMusicas = musicas.filter((musica) => musica.youtube_id !== id);
-                setMusicas(novasMusicas);
+                
+                alert("Música excluída com sucesso!");
             })
             .catch((err) => {
                 console.error(err);
@@ -84,7 +84,7 @@ const ListagemEditavel = () => {
                                 <button className="le-button-edit">Editar</button>
                             </a>
                             {/* botão que dispara a função excluirMusica */}
-                            <button className="le-button-delete" onClick={() => excluirMusica(musica.youtube_id)}>
+                            <button className="le-button-delete" onClick={() => excluirMusica(musica.id)}>
                                 Excluir
                             </button>
 
