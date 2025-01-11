@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { arrayMove, SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import { SortableItem } from "./SortableItem"; // Component personalizado para itens arrastáveis
+import { SortableItem } from "./SortableItem"; 
 import "./Lista.css";
 
 const Lista = () => {
@@ -84,6 +84,7 @@ const Lista = () => {
                                     <iframe
                                         className="iframe-video"
                                         src={`https://www.youtube.com/embed/${musica.youtube_id}`}
+                                        // src={musica.link}
                                         title="YouTube video player"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
