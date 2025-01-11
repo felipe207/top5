@@ -1,11 +1,35 @@
 import React from "react";
+import './Header.css';
 
 const Header = () => {
+
+  const token = localStorage.getItem('token');
+  const name = localStorage.getItem('name');
+
   return (
     <header style={styles.header}>
       <div style={styles.container}>
-        <h1 style={styles.logo}>Pine Music</h1>
-        <button style={styles.loginButton}>Login</button>
+        <a className="link-home" href="/">
+          <h1 style={styles.logo}>Pine Music - Top 5 Tião Carreiro e Pardinho</h1>
+        </a>
+
+        {token ? (
+          <div className="user-info">
+            <h1>Olá, {name}</h1>
+
+            <a className="link-musicas" href="/musicas">
+              <h1 >Gerenciar Músicas</h1>
+            </a>
+            <a href="/logout">
+              <button style={styles.loginButton}>Logout</button>
+            </a>
+          </div>
+        ) : (
+          <a href="/login">
+            <button style={styles.loginButton}>Login</button>
+          </a>
+        )}
+
       </div>
     </header>
   );
@@ -35,7 +59,7 @@ const styles = {
     margin: 0,
   },
   loginButton: {
-    backgroundColor: "#1a73e8", // Cor azul
+    backgroundColor: "#212121",
     color: "#fff",
     border: "none",
     padding: "10px 20px",
@@ -43,6 +67,7 @@ const styles = {
     cursor: "pointer",
     fontSize: "1rem",
     transition: "background-color 0.3s",
+    border: "1px solid #fff",
   },
 };
 
